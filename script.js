@@ -51,6 +51,8 @@ const init = () => {
   player0El.classList.add('player--active');
   player1El.classList.remove('player--active');
   diceEl.classList.add('hidden');
+  document.querySelector(`#name--0`).textContent = `Player 1`;
+  document.querySelector(`#name--1`).textContent = `Player 2`;
 };
 
 init();
@@ -93,6 +95,8 @@ btnHold.addEventListener('click', () => {
     document
       .querySelector(`.player--${activePlayer}`)
       .classList.remove('player--active');
+
+    document.querySelector(`#name--${activePlayer}`).textContent = `Winner 🎉`;
 
     disableButtons(!isPlaying);
   } else {

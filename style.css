@@ -54,6 +54,7 @@ main {
   word-spacing: 2px;
   font-weight: 300;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .score {
@@ -140,7 +141,7 @@ main {
 }
 
 .btn:active {
-  transform: translate(-50%, 3px);
+  background-color: rgb(199, 54, 95, 0.7);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 }
 
@@ -168,4 +169,108 @@ main {
 
 .hidden {
   display: none;
+}
+@media (max-width: 1000px) {
+  main {
+    max-height: 90%;
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 750px) {
+  main {
+    height: 100%;
+    max-height: none;
+  }
+  html {
+    font-size: 56.25%;
+  }
+
+  .player {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+  main {
+    flex-direction: column;
+  }
+  .current {
+    max-width: 25%;
+    padding: 1rem;
+  }
+  .btn--new {
+    top: 2rem;
+  }
+  .dice {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 12rem;
+  }
+
+  .btn--roll {
+    left: 20%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .btn--hold {
+    left: 80%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .score {
+    margin-top: auto;
+  }
+}
+
+@media (max-width: 644px) {
+  html {
+    font-size: 50%;
+  }
+  .btn::first-letter {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  #score--0 {
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+  }
+  #score--1 {
+    margin: 0;
+    position: absolute;
+    top: 80%;
+    left: 20%;
+  }
+  .current {
+    max-width: 35%;
+  }
+  .btn::first-letter {
+    margin-right: 0rem;
+  }
+  .btn--roll {
+    padding: 0.7rem 1rem;
+    left: 18%;
+    font-size: 1.5rem;
+  }
+  .btn--hold {
+    padding: 0.7rem 1rem;
+    font-size: 1.5rem;
+    left: 85%;
+    width: 10rem;
+  }
+  .current--0-container {
+    position: absolute;
+    right: 5%;
+    top: 27.5%;
+  }
+  .current--1-container {
+    position: absolute;
+    right: 5%;
+    top: 77.5%;
+  }
 }
